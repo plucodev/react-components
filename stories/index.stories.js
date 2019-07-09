@@ -7,7 +7,7 @@ import { days, menuItems, actionableMenu, markdown } from './data.js';
 
 import { Theme, ActionableItem, DropLink, Button, CheckBox,
  List, TimeLine, Sidebar, Panel, Login, Forgot, Loading,
-  MenuItem, MarkdownParser, Filter, GithubCard, Icon, Modal } from '../src/index';
+  MenuItem, MarkdownParser, Filter, GithubCard, Icon, Modal, Tooltip } from '../src/index';
 
 
 import { text, boolean, number, array, object, select } from '@storybook/addon-knobs';
@@ -371,8 +371,17 @@ storiesOf('Forgot', module).add('default configuration', () => (<Theme.Theme>
  */
 
 storiesOf('GithubCard', module).add('default configuration', () => (<Theme.Theme>
-    <GithubCard    
+    <GithubCard
       gitUsername={text('Github Username', 'plucodev')}
+    />
+</Theme.Theme>));
+/**
+ *  Tooltip
+ */
+
+storiesOf('Tooltip', module).add('default configuration', () => (<Theme.Theme>
+    <Tooltip
+    //   gitUsername={text('Github Username', 'plucodev')}
     />
 </Theme.Theme>));
 
